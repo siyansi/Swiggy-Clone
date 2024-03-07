@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import food from '../../assests/fresh-gourmet-meal-beef-taco-salad-plate-generated-by-ai.jpg'
 const Cards = () => {
  
 
@@ -8,7 +8,7 @@ const Cards = () => {
   const items = [
     {
       id: 1,
-      img: "https://img.freepik.com/free-photo/delicious-indian-food-tray_23-2148723505.jpg?t=st=1709289827~exp=1709293427~hmac=6bb4649059b371c636cb0d9a8d5cddcea2f000b0d6d6f104330ec238f2a65f24&w=996",
+      img: food,
       heading: "Pizza Hut",
       rating:'4.2',
       time: "30-35 mins",
@@ -105,9 +105,9 @@ const Cards = () => {
       ))}
     </div> */}
 
-    <div className="carousel rounded-box">
+    <div className="carousel rounded-box ">
   <div className="carousel-item">
-  <div className='flex gap-10 '>
+  <div className='flex gap-10 cursor-pointer '>
       {items.map((item) => (
         <div className="transition-transform duration-300 transform hover:scale-95 " key={item.id}>
           <div className="">

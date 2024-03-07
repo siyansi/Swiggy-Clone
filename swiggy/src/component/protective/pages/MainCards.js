@@ -1,4 +1,5 @@
 import React from 'react'
+import Cards from './Cards'
 
 const MainCards = () => {
   return (
@@ -14,8 +15,11 @@ const MainCards = () => {
       <button className="text-black border border-gray-400 font-bold  h-9 px-5 rounded-full  shadow-lg">Less than Rs. 300</button>
     </div>
 
-<div>\
-  xsae
+<div className='px-16'>
+
+  <Cards/>
+  <Cards/>
+  <Cards/>
 </div>
     </div>
   )
