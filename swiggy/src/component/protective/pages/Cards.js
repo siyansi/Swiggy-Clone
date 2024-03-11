@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import food from '../../assests/fresh-gourmet-meal-beef-taco-salad-plate-generated-by-ai.jpg'
+import { FaCheckCircle } from "react-icons/fa";
 const Cards = () => {
  
 
@@ -17,7 +18,7 @@ const Cards = () => {
     },
     {
       id: 2,
-      img: "https://img.freepik.com/free-photo/fresh-gourmet-meal-beef-taco-salad-plate-generated-by-ai_188544-13382.jpg?t=st=1709527630~exp=1709531230~hmac=941fc2ee332e340ad548dfa98a30de716da6e20489c32d515db36a83ad266891&w=1380",
+      img: "https://img.freepik.com/free-photo/top-view-fast-food-mix-hamburger-doner-sandwich-chicken-nuggets-rice-vegetable-salad-chicken-sticks-caesar-salad-mushrooms-pizza-chicken-ragout-french-fries-mayo_141793-3997.jpg?t=st=1709883002~exp=1709886602~hmac=7eeb7a03a009eacc85497d608397e08a8313072e20fd2b228fead6af36bff85b&w=1480",
       heading: "KFC",
       rating:'4.4',
       time: "30-35 mins",
@@ -86,7 +87,8 @@ const Cards = () => {
   ];
 
   return (
-    <div className=' mt-10 w-screen md:text-lg sm:text-sm' style={{ width: "100%", scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}>
+    <div className=' mt-10 w-full  md:text-lg sm:text-sm' style={{ width: "100%", scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}>
+       {/* <h2 className='text-3xl font-semibold'>Top restaurant Chains in Nellai </h2> */}
     {/* <div className='flex gap-10'>
       {items.map((item) => (
         <div className="" key={item.id}>
@@ -105,8 +107,8 @@ const Cards = () => {
       ))}
     </div> */}
 
-    <div className="carousel rounded-box ">
-  <div className="carousel-item">
+    <div className="carousel rounded-box  ">
+  <div className="carousel-item ">
   <div className='flex gap-10 cursor-pointer '>
       {items.map((item) => (
         <div className="transition-transform duration-300 transform hover:scale-95 " key={item.id}>
@@ -118,8 +120,8 @@ const Cards = () => {
             <div className='flex gap-2 font-semibold text-gray-700'>
               <h3>{item.rating}</h3><h3>{item.time}</h3>
             </div>
-            <p className='font-medium text-gray-500'>{item.Items}</p>
-            <p className='font-medium text-gray-500'>{item.place}</p>
+            <p className='font-medium text-gray-500'> {item.Items}</p>
+            <p className='font-medium text-gray-500 flex'> {item.place}</p>
           </div>
         </div>
       ))}

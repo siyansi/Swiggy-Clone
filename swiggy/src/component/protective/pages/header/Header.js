@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { TiShoppingCart } from "react-icons/ti";
-import logo from "../../assests/10399365.png";
+import logo from "../../../assests/10399365.png";
 import { IoSearch } from "react-icons/io5";
 import { BiSolidOffer } from "react-icons/bi";
 import { IoMdHelp } from "react-icons/io";
 import { SiGnuprivacyguard } from "react-icons/si";
-import LoginPage from "../../register/LoginPage";
+import LoginPage from "../../../register/LoginPage";
+import { IoIosOptions } from "react-icons/io";
+import Home from "../Home";
+import './Header.css'
+import { FaChevronDown } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+
+
 
 const Header = ({ showButtons }) => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -15,6 +22,7 @@ const Header = ({ showButtons }) => {
     setShowDropdown(!showDropdown);
   };
 
+  const navigate= useNavigate()
   return (
     <div className="fixed top-0 w-full z-10  ">
       
@@ -27,16 +35,29 @@ const Header = ({ showButtons }) => {
               <div className="flex gap-96   ">
                 {/* Render your buttons here */}
                 <div className="flex  gap-2   pt-10 ml-10 w-full ">
-                <div className="carousel rounded-box w-full gap-6">
-  <div className="carousel-item ">
-  <button className="text-black border text-sm border-gray-400 font-bold  h-9 px-5 rounded-full  shadow-lg ">
-                    Filter
-                  </button>
-  </div> 
+                <div className=" carousel rounded-box w-full gap-4">
+  <div className="carousel-item  ">
+  
+
+<button className="" onClick={()=>document.getElementById('my_modal_3').showModal()}><button className="text-black border text-sm border-gray-400 font-bold  h-9 px-5 rounded-full pt-2  shadow-lg flex ">
+                    Filter<IoIosOptions className="mt-1 h-4 w-4" />
+                  </button></button>
+<dialog id="my_modal_3" className="w-[60%] h-96  rounded-xl shadow-lg slideIn">
+  <div className="w-[80%] p-4 ml-2">
+    <form method="dialog">
+      {/* if there is a button in form, it will close the modal */}
+      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+   <Home />
+  </div>
+</dialog>
+  </div>
+
   <div className="carousel-item">
-  <button className="text-black border text-sm border-gray-400 font-bold  h-9 px-5 rounded-full  shadow-lg ">
-                    Sort By
+  <button className="text-black border text-sm border-gray-400 font-bold pt-2 gap-1 h-9 px-5 rounded-full flex shadow-lg ">
+                    Sort By<FaChevronDown className="mt-1 h-4 w-4" />
                   </button>  </div> 
+                  
   <div className="carousel-item">
 
   <button className="text-black border text-sm border-gray-400 font-bold  h-9 px-5 rounded-full  shadow-lg">
@@ -173,9 +194,11 @@ const Header = ({ showButtons }) => {
     <button>close</button>
   </form>
 </dialog>
+<Link to='/addcart'>
                 <h1 className="text-xl font-semibold hover:text-orange-600 cursor-pointer flex gap-2 hidden mr-10 md:flex">
                   <TiShoppingCart className="mt-1" /> Cart
-                </h1>
+                </h1></Link>
+
                 <div className="md:hidden">
                   <button
                     onClick={handleDropdownToggle}
