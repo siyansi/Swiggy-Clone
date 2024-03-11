@@ -39,7 +39,7 @@ const LoginPage = () => {
 </div>
 
 <div className='flex place-content-center mt-6'>
-<button className="bg-orange-500 border w-40 h-12 rounded-xl  btn   ">Login</button>
+<button className="bg-orange-500  border w-40 h-12 rounded-xl  btn text-white text-xl  ">Login</button>
 </div>
 
 </div>

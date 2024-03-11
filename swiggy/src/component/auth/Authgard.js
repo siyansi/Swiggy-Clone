@@ -1,4 +1,4 @@
-import Header from "../protective/pages/Header";
+import Header from "../protective/pages/header/Header";
 import HomePage from "../protective/pages/HomePage";
 
 
